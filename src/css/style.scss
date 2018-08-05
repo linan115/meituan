@@ -1,0 +1,254 @@
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    @include display(flex, column);
+}
+
+.header {
+    width: 100%;
+    height: px2rem(55px);
+    @include display(flex);
+    background: #06c1ae;
+    padding: 0 px2rem(10px);
+    color: #fff;
+    border-bottom: 1px solid #218a7b;
+    a {
+        color: #fff;
+        i {
+            vertical-align: middle;
+        }
+    }
+    span {
+        @include display(flex, column);
+    }
+    p {
+        flex: 1;
+        height: px2rem(50px);
+        padding: px2rem(12px) px2rem(10px);
+        position: relative;
+        i {
+            position: absolute;
+            left: 17px;
+            top: 15px;
+            vertical-align: middle;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            outline: 0;
+            border-radius: px2rem(5px);
+            background: rgba(0, 0, 0, .1);
+            padding-left: px2rem(30px);
+            &::-webkit-input-placeholder {
+                color: #68dbce;
+                ;
+            }
+        }
+    }
+}
+
+.section {
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+    .pic {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    .big-box {
+        width: 100%;
+        @include display(flex, column);
+        @include display(flex);
+        overflow: hidden;
+        .box {
+            width: 100%;
+            flex-shrink: 0;
+            @include display(flex);
+            flex-wrap: wrap;
+            padding: px2rem(8px) 0;
+            dl {
+                width: 20%;
+                height: px2rem(80px);
+                @include display(flex, column);
+                dt {
+                    width: px2rem(40px);
+                    height: px2rem(40px);
+                    background: red;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: px2rem(40px);
+                    i {
+                        font-size: px2rem(24px);
+                        color: #fff;
+                    }
+                }
+                dd {
+                    height: px2rem(30px);
+                    line-height: px2rem(30px);
+                }
+            }
+        }
+    }
+    .line {
+        width: 100%;
+        height: px2rem(10px);
+        background: #f7efef;
+        border-bottom: 1px solid #dedbce;
+        border-top: 1px solid #dedbce;
+    }
+    .list {
+        width: 100%;
+        @include display(flex);
+        padding: px2rem(10px) 0;
+        dl {
+            flex: 1;
+            @include display(flex, column);
+            border-right: 1px solid #ccc;
+            &:last-child {
+                border-right: 0;
+            }
+            b {
+                color: #55a40f;
+                font-size: px2rem(18px);
+                font-weight: bold;
+            }
+            &:nth-child(2) {
+                b {
+                    color: #ff3f0d;
+                    color: #f742a0;
+                }
+            }
+            &:nth-child(3) {
+                h1 {
+                    color: #f742a0;
+                }
+            }
+            p {
+                margin-top: px2rem(10px);
+            }
+            dt {
+                width: px2rem(100px);
+                height: px2rem(100px);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .title {
+        width: 100%;
+        padding-left: px2rem(10px);
+        @include display(flex, column);
+        border-bottom: 1px solid #ccc;
+        .p {
+            width: 100%;
+            height: px2rem(50px);
+            border-bottom: 1px solid #ccc;
+            line-height: px2rem(50px);
+            font-size: px2rem(18px);
+        }
+        dl {
+            width: 100%;
+            @include display(flex, row, flex-start, flex-start);
+            padding: px2rem(10px) px2rem(10px) px2rem(10px) 0;
+            border-bottom: 1px solid #ccc;
+            dt {
+                width: px2rem(100px);
+                height: px2rem(100px);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            dd {
+                flex: 1;
+                padding-left: px2rem(10px);
+                h3 {
+                    font-size: px2rem(18px);
+                }
+                .time {
+                    line-height: 2.5;
+                    color: #666;
+                }
+                .price {
+                    width: 100%;
+                    padding-top: px2rem(23px);
+                    @include display(flex, row, space-between);
+                    color: #666;
+                    b {
+                        font-weight: bold;
+                        color: #f742a0;
+                        font-size: px2rem(18px);
+                    }
+                    em {
+                        margin-left: px2rem(10px);
+                        font-style: normal;
+                        color: #666;
+                    }
+                }
+            }
+        }
+        a {
+            width: 100%;
+            height: px2rem(40px);
+            @include display(flex, row, space-between);
+            padding-right: px2rem(5px);
+            box-sizing: border-box;
+            font-size: px2rem(16px);
+            color: #06c1ae;
+        }
+    }
+    .footer {
+        width: 100%;
+        padding: px2rem(10px) px2rem(10px);
+        background: #f0efed;
+        .tit {
+            width: 100%;
+            height: px2rem(40px);
+            color: #06c1ae;
+            line-height: px2rem(40px);
+            a {
+                color: #06c1ae;
+            }
+        }
+        .change {
+            width: 100%;
+            height: px2rem(40px);
+            @include display(flex, row, space-between);
+            button {
+                border: 1px solid #06c1ae;
+                background: 0;
+                padding: px2rem(4px) px2rem(10px);
+                margin: px2rem(5px);
+            }
+            p {
+                span {
+                    padding: px2rem(3px) px2rem(18px);
+                    border: 1px solid #06c1ae;
+                }
+            }
+        }
+        .nav {
+            width: 100%;
+            height: px2rem(70px);
+            @include display(flex, row, space-between);
+            a {
+                flex: 1;
+                text-align: center;
+                border-right: 1px solid #999;
+                color: #06c1ae;
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+        }
+    }
+}
